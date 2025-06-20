@@ -1,0 +1,15 @@
+[build]
+  publish = "out"
+  command = "npm run build"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Client-side routing uchun redirect
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
